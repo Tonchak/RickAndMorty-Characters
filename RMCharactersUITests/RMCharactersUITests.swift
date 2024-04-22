@@ -1,10 +1,3 @@
-//
-//  RMCharactersUITests.swift
-//  RMCharactersUITests
-//
-//  Created by Vitaliy Tonchak on 17/4/24.
-//
-
 import XCTest
 
 final class RMCharactersUITests: XCTestCase {
