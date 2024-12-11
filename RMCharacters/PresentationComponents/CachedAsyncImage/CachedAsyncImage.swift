@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct CachedAsyncImage<Content: View>: View {
-    
+
     @State private var phase: AsyncImagePhase = .empty
+
     private let url: URL?
     private let urlSession: URLSession
     private let transaction: Transaction
     private let content: (AsyncImagePhase) -> Content
-    
+
     var body: some View {
         content(phase)
             .animation(transaction.animation, value: phase.image)
@@ -15,7 +16,7 @@ struct CachedAsyncImage<Content: View>: View {
                 await load(url: url)
             }
     }
-    
+
     init<I, P>(url: URL?,
                urlCache: URLCache = .shared,
                @ViewBuilder content: @escaping (Image) -> I,
@@ -29,7 +30,7 @@ struct CachedAsyncImage<Content: View>: View {
             }
         }
     }
-    
+
     init(url: URL?,
          urlCache: URLCache = .shared,
          transaction: Transaction = Transaction(),
@@ -43,7 +44,7 @@ struct CachedAsyncImage<Content: View>: View {
         self.transaction = transaction
         self.content = content
     }
-    
+
     private func load(url: URL?) async {
         do {
             guard let url = url else { return }

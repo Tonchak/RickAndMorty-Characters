@@ -7,21 +7,14 @@ struct CharacterEntityMock: CharacterEntityProtocol {
     var status: String
     var species: String
     var type: String?
-    
     var gender: String
-    
     var origin: RMDomain.OriginEntityProtocol
-    
     var location: RMDomain.LocationEntityProtocol
-    
     var image: String
-    
     var episode: [String]
-    
     var url: String
-    
     var created: String
-    
+
     init(id: Int = 1,
          name: String = "Morty Smith",
          status: String = "Alive",
@@ -48,14 +41,12 @@ struct CharacterEntityMock: CharacterEntityProtocol {
         self.url = url
         self.created = created
     }
-    
 }
 
 struct MockOriginEntity: OriginEntityProtocol {
     var name: String
-    
     var url: String
-    
+
     init(name: String = "", url: String = "") {
         self.name = name
         self.url = url
@@ -64,9 +55,8 @@ struct MockOriginEntity: OriginEntityProtocol {
 
 struct MockLocationEntity: LocationEntityProtocol {
     var name: String
-    
     var url: String
-    
+
     init(name: String = "", url: String = "") {
         self.name = name
         self.url = url

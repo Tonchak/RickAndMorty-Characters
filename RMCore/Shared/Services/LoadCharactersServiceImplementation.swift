@@ -2,11 +2,11 @@ import Foundation
 
 public final class LoadCharactersServiceImplementation: LoadCharactersService {
     let networkSession: NetworkSession
-    
+
     public init(networkSession: NetworkSession = NetworkSessionImplementation()) {
         self.networkSession = networkSession
     }
-    
+
     public func loadCharacters(pageNumber: Int) async throws -> [Character] {
         let request = GetCharactersListRequest()
             .addQueryItem(name: "page", value: String(pageNumber))

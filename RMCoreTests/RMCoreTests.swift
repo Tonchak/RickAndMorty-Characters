@@ -2,11 +2,11 @@ import XCTest
 @testable import RMCore
 
 final class RMCoreTests: XCTestCase {
-    
+
     func testCharacterInit() {
         let origin = Origin(name: "Earth (C-137)", url: "https://rickandmortyapi.com/api/location/1")
         let location = Location(name: "Citadel of Ricks", url: "https://rickandmortyapi.com/api/location/3")
-        
+
         let sut = Character(
             id: 1,
             name: "Rick Sanchez",

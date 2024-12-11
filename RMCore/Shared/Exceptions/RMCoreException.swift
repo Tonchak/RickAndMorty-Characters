@@ -28,7 +28,7 @@ public struct RMServerError: RMCoreException {
 public struct RMBusinessError: RMCoreException {
     public var code: Int
     public var msg: String
-    
+
     public init(code: Int, msg: String) {
         self.code = code
         self.msg = msg

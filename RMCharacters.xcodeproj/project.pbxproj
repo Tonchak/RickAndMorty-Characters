@@ -54,6 +54,7 @@
 		56B744B02BD1466D00D30BEC /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744AF2BD1466D00D30BEC /* HTTPRequest.swift */; };
 		56B744B32BD14A0800D30BEC /* APISessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744B22BD14A0800D30BEC /* APISessionConfiguration.swift */; };
 		56B744B92BD14C1300D30BEC /* RMCoreException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744B82BD14C1300D30BEC /* RMCoreException.swift */; };
+		56C688D22C529FD2008384CD /* CharacterItemViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C688D12C529FD2008384CD /* CharacterItemViewModelMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +195,7 @@
 		56B744AF2BD1466D00D30BEC /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		56B744B22BD14A0800D30BEC /* APISessionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionConfiguration.swift; sourceTree = "<group>"; };
 		56B744B82BD14C1300D30BEC /* RMCoreException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCoreException.swift; sourceTree = "<group>"; };
+		56C688D12C529FD2008384CD /* CharacterItemViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemViewModelMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +343,7 @@
 			children = (
 				5675F5C22BD2DBCB00C0793D /* CharacterItemView.swift */,
 				5675F5DA2BD5330C00C0793D /* CharacterItemViewModel.swift */,
+				56C688D12C529FD2008384CD /* CharacterItemViewModelMock.swift */,
 			);
 			path = CharacterItem;
 			sourceTree = "<group>";
@@ -885,6 +888,7 @@
 				5675F5D02BD3D50900C0793D /* CharacterEntityMock.swift in Sources */,
 				5675F5BE2BD2B21F00C0793D /* CharactersListView.swift in Sources */,
 				5675F5D72BD3E46C00C0793D /* RMAsyncImage.swift in Sources */,
+				56C688D22C529FD2008384CD /* CharacterItemViewModelMock.swift in Sources */,
 				5675F5D42BD3E3A000C0793D /* CachedAsyncImage.swift in Sources */,
 				5675F5C32BD2DBCB00C0793D /* CharacterItemView.swift in Sources */,
 				5675F5DB2BD5330D00C0793D /* CharacterItemViewModel.swift in Sources */,

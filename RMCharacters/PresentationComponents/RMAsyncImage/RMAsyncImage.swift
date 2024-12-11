@@ -12,12 +12,12 @@ enum RMImageType {
 }
 
 struct RMAsyncImage<V: ViewModifier>: View {
-    
+
     private var url: URL?
     private var placeholderImage: RMImageType
     private var customVM: V?
     private var genericVM: RMAsyncImageViewModifier?
-    
+
     var body: some View {
         CachedAsyncImage(url: url, urlCache: .imageCache) { image in
             if let genericVM = genericVM {
@@ -35,7 +35,7 @@ struct RMAsyncImage<V: ViewModifier>: View {
             }
         }
     }
-    
+
     init(url: URL? = nil,
          placeholderImage: RMImageType,
          customVM: V? = nil,
@@ -46,8 +46,9 @@ struct RMAsyncImage<V: ViewModifier>: View {
         self.customVM = customVM
         self.genericVM = genericVM
     }
-    
-    @ViewBuilder private func getImageWithCustomModifierIfNeeded(image: Image) -> some View {
+
+    @ViewBuilder
+    private func getImageWithCustomModifierIfNeeded(image: Image) -> some View {
         if let customVM = customVM {
             image
                 .resizable()
@@ -89,7 +90,7 @@ struct RMAsyncImageViewModifier: ViewModifier {
         applyIfAspectRatioNeeded(content: content)
             .opacity((opacity) ?? 1)
     }
-    
+
     @ViewBuilder
     private func applyIfAspectRatioNeeded(content: Content) -> some View {
         if let aspectRatio = aspectRatio {
@@ -100,7 +101,3 @@ struct RMAsyncImageViewModifier: ViewModifier {
         }
     }
 }
-
-//#Preview {
-//    RMAsyncImage()
-//}

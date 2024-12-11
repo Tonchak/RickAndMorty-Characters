@@ -5,7 +5,7 @@ final class GetCharactersListRequest: HTTPRequest {
     var path: String = "/api/character"
     var queryItems: [URLQueryItem] = []
     var body: Data?
-    
+
     func addQueryItem(name: String, value: String?) -> GetCharactersListRequest {
         let queryItem = URLQueryItem(name: name, value: value)
         queryItems.append(queryItem)
