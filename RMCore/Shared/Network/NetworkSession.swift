@@ -6,14 +6,14 @@ public protocol NetworkSession {
 }
  
 public class NetworkSessionImplementation: NetworkSession {
-    
+
     enum HTTPResponseStatus: Equatable {
         case valid
         case authError
         case requestError
         case serverError
         case unknown
-        
+
         init(statusCode: Int) {
             switch statusCode {
             case 200...299:
@@ -29,16 +29,16 @@ public class NetworkSessionImplementation: NetworkSession {
             }
         }
     }
-    
+
     private var requestHandler: (HTTPRequest) async throws -> Data = { _ in Data()}
     let urlSession: URLSession
     let sessionConfiguration: APISessionConfiguration
-    
+
     public init(urlSession: URLSession = URLSession.shared, sessionConfiguration: APISessionConfiguration = APISessionConfiguration.shared) {
         self.urlSession = urlSession
         self.sessionConfiguration = sessionConfiguration
     }
-    
+
     @discardableResult
     public func request(_ endpoint: HTTPRequest) async throws -> Data {
         let urlRequest = try urlRequest(from: endpoint)
@@ -49,7 +49,7 @@ public class NetworkSessionImplementation: NetworkSession {
         
         return data
     }
-    
+
     private func performHttpRequest(_ urlRequest: URLRequest) async throws -> (Data, HTTPURLResponse) {
         do {
             let (data, response) = try await urlSession.data(for: urlRequest)
@@ -61,24 +61,24 @@ public class NetworkSessionImplementation: NetworkSession {
             throw RMCoreUnknownError()
         }
     }
-    
+
     private func urlRequest(from endPoint: HTTPRequest) throws -> URLRequest {
         guard let url = endPoint.url(hostName: sessionConfiguration.hostName) else {
             throw RMCoreUnknownError()
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = endPoint.method.rawValue
         request.httpBody = endPoint.body
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+
         return request
     }
-    
+
     private func validateResponse(_ response: (Data, HTTPURLResponse)) throws {
         let (_, httpResponse) = response
         let status = HTTPResponseStatus(statusCode: httpResponse.statusCode)
-        
+
         switch status {
         case .valid, .unknown:
             return

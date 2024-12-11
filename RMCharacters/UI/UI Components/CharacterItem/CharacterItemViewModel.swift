@@ -1,14 +1,14 @@
 import Foundation
 import RMDomain
 
-class CharacterItemViewModel: ObservableObject {
-    
+final class CharacterItemViewModel: ObservableObject {
+
     var data: CharacterEntityProtocol
-    
+
     init(data: CharacterEntityProtocol) {
         self.data = data
     }
-    
+
     func created() -> String {
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(abbreviation: "UTC")

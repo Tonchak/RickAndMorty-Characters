@@ -1,11 +1,11 @@
 import SwiftUI
 import RMDomain
 
-struct CharacterItemView<ViewModel: CharacterItemViewModel>: View {
-    
-    @StateObject var viewModel: ViewModel
+struct CharacterItemView<VM: CharacterItemViewModel>: View {
+
+    @StateObject var viewModel: VM
     @ScaledMetric(relativeTo: .body) var scaledPadding: CGFloat = 2
-    
+
     var body: some View {
         HStack(alignment: .top) {
             RMAsyncImage(url: viewModel.data.image, placeholder: .avatar)

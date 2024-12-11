@@ -9,7 +9,7 @@ extension CharacterResponse {
             return try? Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
         }
     }
-    
+
     struct Samples {
         static var successfullResponse = CharacterResponse(
             info: Info(

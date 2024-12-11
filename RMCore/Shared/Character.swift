@@ -5,7 +5,7 @@ public struct Info: Decodable, Equatable {
     public let pages: Int
     public let next: String?
     public let prev: String?
-    
+
     public enum CodingKeys: String, CodingKey {
         case count
         case pages
@@ -27,7 +27,7 @@ public struct Character: Decodable, Equatable {
     public let episode: [String]
     public let url: String
     public let created: String
-    
+
     public init(id: Int, name: String, status: String, species: String, type: String?, gender: String, origin: Origin, location: Location, image: String, episode: [String], url: String, created: String) {
         self.id = id
         self.name = name
@@ -42,7 +42,7 @@ public struct Character: Decodable, Equatable {
         self.url = url
         self.created = created
     }
-    
+
     public enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -62,7 +62,7 @@ public struct Character: Decodable, Equatable {
 public struct Origin: Decodable, Equatable {
     public let name: String
     public let url: String
-    
+
     public init(name: String, url: String) {
         self.name = name
         self.url = url
@@ -72,7 +72,7 @@ public struct Origin: Decodable, Equatable {
 public struct Location: Decodable, Equatable {
     public let name: String
     public let url: String
-    
+
     public init(name: String, url: String) {
         self.name = name
         self.url = url

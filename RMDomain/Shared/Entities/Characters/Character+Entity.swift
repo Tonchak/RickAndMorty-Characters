@@ -14,7 +14,7 @@ public struct CharacterEntity: CharacterEntityProtocol {
     public let episode: [String]
     public let url: String
     public let created: String
-    
+
     init(decodable: Character) {
         self.id = decodable.id
         self.name = decodable.name

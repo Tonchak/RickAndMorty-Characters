@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct CharactersListView<ViewModel: CharactersListViewModel>: View {
-    
-    @StateObject var viewModel: ViewModel
-    
+struct CharactersListView<VM: CharactersListViewModel>: View {
+
+    @StateObject var viewModel: VM
+
     var body: some View {
         NavigationStack(root: {
             List(viewModel.loadedList, id: \.id) { item in
@@ -24,7 +24,6 @@ struct CharactersListView<ViewModel: CharactersListViewModel>: View {
                 viewModel.retrieveNextItems()
             }
         })
-        
     }
 }
 

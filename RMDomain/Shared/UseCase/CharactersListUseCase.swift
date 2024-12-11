@@ -7,11 +7,11 @@ public protocol CharactersListUseCase {
 
 public final class DefaultCharactersListUseCase: CharactersListUseCase {
     private let repository: any RMRepository
-    
+
     public init(repository: any RMRepository = RMRepositoryImplementation(service: LoadCharactersServiceImplementation())) {
         self.repository = repository
     }
-    
+
     public func getCharactersByPage(_ pageNumber: Int) async throws -> [CharacterEntityProtocol] {
         do {
             let items = try await self.repository.fetchCharacters(pageNumber: pageNumber)

@@ -1,17 +1,17 @@
 import SwiftUI
 
-struct CharacterDisclosureView<ViewModel: CharacterItemViewModel>: View {
-    
-    @StateObject var viewModel: ViewModel
-    
+struct CharacterDisclosureView<VM: CharacterItemViewModel>: View {
+
+    @StateObject var viewModel: VM
+
     var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .top) {
                 ScrollView {
-                    avatarImage()
+                    avatarImage
                         .frame(width: proxy.size.width, height: proxy.size.width)
                     Spacer(minLength: 20)
-                    
+
                     HStack {
                         Text(viewModel.data.name)
                             .font(.largeTitle)
@@ -20,7 +20,7 @@ struct CharacterDisclosureView<ViewModel: CharacterItemViewModel>: View {
                     }
                     .padding(.horizontal)
                     .padding(.vertical, 4)
-                    
+
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             Text("Species:")
@@ -29,7 +29,7 @@ struct CharacterDisclosureView<ViewModel: CharacterItemViewModel>: View {
                                 .bold()
                             Spacer()
                         }
-                        
+
                         HStack {
                             Text("Gender:")
                                 .foregroundStyle(.secondary)
@@ -37,7 +37,7 @@ struct CharacterDisclosureView<ViewModel: CharacterItemViewModel>: View {
                                 .bold()
                             Spacer()
                         }
-                        
+
                         HStack {
                             Text("Status:")
                                 .foregroundStyle(.secondary)
@@ -47,9 +47,9 @@ struct CharacterDisclosureView<ViewModel: CharacterItemViewModel>: View {
                         }
                     }
                     .padding(.horizontal)
-                    
+
                     Divider().padding(.horizontal)
-                    
+
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(alignment: .top) {
                             Text("Type:")
@@ -92,10 +92,10 @@ struct CharacterDisclosureView<ViewModel: CharacterItemViewModel>: View {
                     .bold()
             }
         }
-        
+
     }
-    
-    @ViewBuilder func avatarImage() -> some View {
+
+    var avatarImage: some View {
         ZStack {
             VStack {
                 RMAsyncImage(url: viewModel.data.image, placeholder: .avatar)
