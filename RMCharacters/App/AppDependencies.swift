@@ -2,6 +2,7 @@ import Foundation
 import RMCore
 import RMDomain
 
+@MainActor
 enum AppDependencies {
     static func makeCharactersListViewModel() -> CharactersListViewModel {
         let networkSession = NetworkSessionImplementation()

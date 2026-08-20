@@ -13,7 +13,7 @@ final class LoadCharactersServiceTests: XCTestCase {
         let sut = LoadCharactersServiceImplementation(networkSession: mockNetworkSession)
         let characterResponse = try await sut.loadCharacters(pageNumber: 1)
 
-        XCTAssertEqual(characterResponse, expectedResponse.results)
+        XCTAssertEqual(characterResponse, expectedResponse)
     }
 
     func testThrowsErrorAtFetchingCharacters() async throws {

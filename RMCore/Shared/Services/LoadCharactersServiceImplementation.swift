@@ -7,13 +7,12 @@ public final class LoadCharactersServiceImplementation: LoadCharactersService {
         self.networkSession = networkSession
     }
 
-    public func loadCharacters(pageNumber: Int) async throws -> [Character] {
+    public func loadCharacters(pageNumber: Int) async throws -> CharacterResponse {
         let request = GetCharactersListRequest()
             .addQueryItem(name: "page", value: String(pageNumber))
         let responseData = try await networkSession.request(request)
         do {
-            let decodedResponse = try JSONDecoder().decode(CharacterResponse.self, from: responseData)
-            return decodedResponse.results
+            return try JSONDecoder().decode(CharacterResponse.self, from: responseData)
         } catch {
             throw RMCoreBusinessErrorFactory.mapError(code: .failedToDecode)
         }

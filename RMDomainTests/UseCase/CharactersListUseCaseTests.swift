@@ -3,14 +3,17 @@ import XCTest
 
 final class CharactersListUseCaseTests: XCTestCase {
 
-    func testReturnsCharactersFromRepository() async throws {
+    func testReturnsPageFromRepository() async throws {
         let repository = MockCharactersRepository()
-        repository.stubbedCharacters = [.stub(id: 1, name: "Rick Sanchez")]
+        repository.stubbedPage = CharactersPage(
+            characters: [.stub(id: 1, name: "Rick Sanchez")],
+            nextPageNumber: 2
+        )
         let sut = DefaultCharactersListUseCase(repository: repository)
 
         let result = try await sut.getCharactersByPage(1)
 
-        XCTAssertEqual(result, repository.stubbedCharacters)
+        XCTAssertEqual(result, repository.stubbedPage)
         XCTAssertEqual(repository.lastPageNumber, 1)
     }
 
@@ -34,16 +37,16 @@ private enum StubError: Error, Equatable {
 }
 
 private final class MockCharactersRepository: CharactersRepository {
-    var stubbedCharacters: [CharacterEntity] = []
+    var stubbedPage = CharactersPage(characters: [], nextPageNumber: nil)
     var stubbedError: Error?
     var lastPageNumber: Int?
 
-    func fetchCharacters(pageNumber: Int) async throws -> [CharacterEntity] {
+    func fetchCharacters(pageNumber: Int) async throws -> CharactersPage {
         lastPageNumber = pageNumber
         if let stubbedError {
             throw stubbedError
         }
-        return stubbedCharacters
+        return stubbedPage
     }
 }
 
