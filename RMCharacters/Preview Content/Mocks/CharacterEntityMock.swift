@@ -34,7 +34,7 @@ extension CharacterEntity {
 }
 
 final class PreviewCharactersListUseCase: CharactersListUseCase {
-    func getCharactersByPage(_ pageNumber: Int) async throws -> [CharacterEntity] {
-        [.preview()]
+    func getCharactersByPage(_ pageNumber: Int) async throws -> CharactersPage {
+        CharactersPage(characters: [.preview()], nextPageNumber: nil)
     }
 }

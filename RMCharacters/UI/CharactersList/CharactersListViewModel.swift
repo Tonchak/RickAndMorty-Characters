@@ -1,32 +1,41 @@
 import Foundation
 import RMDomain
 
+@MainActor
 final class CharactersListViewModel: ObservableObject {
 
     @Published var loadedList = [CharacterEntity]()
+    @Published var isLoading = false
+    @Published var errorMessage: String?
     var navigationTitle = "Rick And Morty"
-    private var pageNumber = 0
 
+    private var nextPageNumber: Int? = 1
     private let useCase: CharactersListUseCase
 
     init(useCase: CharactersListUseCase) {
         self.useCase = useCase
     }
 
-    func retrieveNextItems() {
-        pageNumber += 1
-        Task {
-            let result = try await useCase.getCharactersByPage(pageNumber)
-            DispatchQueue.main.async {
-                self.loadedList.append(contentsOf: result)
-            }
+    func loadNextPage() async {
+        guard !isLoading, let pageNumber = nextPageNumber else { return }
+        isLoading = true
+        errorMessage = nil
+        do {
+            let page = try await useCase.getCharactersByPage(pageNumber)
+            loadedList.append(contentsOf: page.characters)
+            nextPageNumber = page.nextPageNumber
+        } catch {
+            errorMessage = error.localizedDescription
         }
+        isLoading = false
+    }
+
+    func loadNextPageIfNeeded() {
+        guard errorMessage == nil else { return }
+        Task { await loadNextPage() }
     }
 
     func isLastItem(_ item: CharacterEntity) -> Bool {
-        if let lastItem = loadedList.last, lastItem.id == item.id {
-            return true
-        }
-        return false
+        loadedList.last?.id == item.id
     }
 }

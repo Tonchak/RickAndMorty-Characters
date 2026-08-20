@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol CharactersListUseCase {
-    func getCharactersByPage(_ pageNumber: Int) async throws -> [CharacterEntity]
+    func getCharactersByPage(_ pageNumber: Int) async throws -> CharactersPage
 }
 
 public final class DefaultCharactersListUseCase: CharactersListUseCase {
@@ -11,7 +11,7 @@ public final class DefaultCharactersListUseCase: CharactersListUseCase {
         self.repository = repository
     }
 
-    public func getCharactersByPage(_ pageNumber: Int) async throws -> [CharacterEntity] {
+    public func getCharactersByPage(_ pageNumber: Int) async throws -> CharactersPage {
         try await repository.fetchCharacters(pageNumber: pageNumber)
     }
 }
