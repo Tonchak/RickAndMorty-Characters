@@ -3,9 +3,9 @@ import RMDomain
 
 final class CharacterItemViewModel: ObservableObject {
 
-    var data: CharacterEntityProtocol
+    var data: CharacterEntity
 
-    init(data: CharacterEntityProtocol) {
+    init(data: CharacterEntity) {
         self.data = data
     }
 

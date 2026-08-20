@@ -106,5 +106,5 @@ struct CharacterDisclosureView<VM: CharacterItemViewModel>: View {
 }
 
 #Preview {
-    CharacterDisclosureView(viewModel: CharacterItemViewModel(data: CharacterEntityMock()))
+    CharacterDisclosureView(viewModel: CharacterItemViewModel(data: .preview()))
 }
