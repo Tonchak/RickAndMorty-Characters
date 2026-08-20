@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+
+jobs:
+  test:
+    name: Unit tests
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List schemes
+        run: xcodebuild -project RMCharacters.xcodeproj -list
+
+      - name: Run unit tests
+        run: |
+          set -euo pipefail
+          xcodebuild test \
+            -project RMCharacters.xcodeproj \
+            -scheme RMCharacters \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            -only-testing:RMDomainTests \
+            -only-testing:RMCoreTests \
+            -only-testing:RMCharactersTests \
+            CODE_SIGNING_ALLOWED=NO
