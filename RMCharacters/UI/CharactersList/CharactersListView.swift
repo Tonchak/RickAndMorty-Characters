@@ -28,6 +28,6 @@ struct CharactersListView<VM: CharactersListViewModel>: View {
 }
 
 #Preview {
-    CharactersListView(viewModel: CharactersListViewModel())
+    CharactersListView(viewModel: CharactersListViewModel(useCase: PreviewCharactersListUseCase()))
         //.environment(\.sizeCategory, .accessibilityLarge)
 }

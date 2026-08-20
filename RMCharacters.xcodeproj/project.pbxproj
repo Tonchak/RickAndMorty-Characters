@@ -16,7 +16,6 @@
 		5675F5BE2BD2B21F00C0793D /* CharactersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5BD2BD2B21F00C0793D /* CharactersListView.swift */; };
 		5675F5C02BD2B23B00C0793D /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5BF2BD2B23B00C0793D /* CharactersListViewModel.swift */; };
 		5675F5C32BD2DBCB00C0793D /* CharacterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5C22BD2DBCB00C0793D /* CharacterItemView.swift */; };
-		5675F5C62BD2EDAF00C0793D /* Character+EntityProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5C52BD2EDAF00C0793D /* Character+EntityProtocols.swift */; };
 		5675F5D02BD3D50900C0793D /* CharacterEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5CF2BD3D50900C0793D /* CharacterEntityMock.swift */; };
 		5675F5D42BD3E3A000C0793D /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5D32BD3E3A000C0793D /* CachedAsyncImage.swift */; };
 		5675F5D72BD3E46C00C0793D /* RMAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5675F5D62BD3E46C00C0793D /* RMAsyncImage.swift */; };
@@ -39,12 +38,9 @@
 		56B7447E2BD0052A00D30BEC /* RMCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B744702BD0052900D30BEC /* RMCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56B744812BD0052A00D30BEC /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7446E2BD0052900D30BEC /* RMCore.framework */; };
 		56B744822BD0052A00D30BEC /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7446E2BD0052900D30BEC /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		56B7448A2BD0057E00D30BEC /* RMRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744892BD0057E00D30BEC /* RMRepository.swift */; };
 		56B744912BD006C800D30BEC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744902BD006C800D30BEC /* Character.swift */; };
 		56B744942BD040DD00D30BEC /* CharactersListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744932BD040DD00D30BEC /* CharactersListUseCase.swift */; };
-		56B744962BD042C500D30BEC /* RMRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744952BD042C500D30BEC /* RMRepositoryImplementation.swift */; };
-		56B744982BD042F500D30BEC /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7446E2BD0052900D30BEC /* RMCore.framework */; };
-		56B744992BD042F500D30BEC /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7446E2BD0052900D30BEC /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		56B744962BD042C500D30BEC /* CharactersRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744952BD042C500D30BEC /* CharactersRepositoryImplementation.swift */; };
 		56B7449F2BD0686A00D30BEC /* LoadCharactersServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7449E2BD0686A00D30BEC /* LoadCharactersServiceImplementation.swift */; };
 		56B744A22BD0789600D30BEC /* CharactersListUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744A12BD0789600D30BEC /* CharactersListUseCaseTests.swift */; };
 		56B744A62BD132C600D30BEC /* Character+Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744A52BD132C600D30BEC /* Character+Entity.swift */; };
@@ -55,6 +51,12 @@
 		56B744B32BD14A0800D30BEC /* APISessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744B22BD14A0800D30BEC /* APISessionConfiguration.swift */; };
 		56B744B92BD14C1300D30BEC /* RMCoreException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B744B82BD14C1300D30BEC /* RMCoreException.swift */; };
 		56C688D22C529FD2008384CD /* CharacterItemViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C688D12C529FD2008384CD /* CharacterItemViewModelMock.swift */; };
+		A11C4A022BD9000100D30BEC /* CharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C4A012BD9000100D30BEC /* CharactersRepository.swift */; };
+		A11C4A042BD9000100D30BEC /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C4A032BD9000100D30BEC /* AppDependencies.swift */; };
+		A11C4A062BD9000100D30BEC /* CharacterEntity+DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C4A052BD9000100D30BEC /* CharacterEntity+DTO.swift */; };
+		A11C4A082BD9000100D30BEC /* CharacterEntityMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11C4A072BD9000100D30BEC /* CharacterEntityMappingTests.swift */; };
+		A11C4A092BD9000100D30BEC /* RMDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7444D2BD004EF00D30BEC /* RMDomain.framework */; };
+		A11C4A0E2BD9000100D30BEC /* RMDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B7444D2BD004EF00D30BEC /* RMDomain.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,12 +116,12 @@
 			remoteGlobalIDString = 56B7446D2BD0052900D30BEC;
 			remoteInfo = RMCore;
 		};
-		56B7449A2BD042F500D30BEC /* PBXContainerItemProxy */ = {
+		A11C4A0A2BD9000100D30BEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 56B7440E2BCFE2C800D30BEC /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 56B7446D2BD0052900D30BEC;
-			remoteInfo = RMCore;
+			remoteGlobalIDString = 56B7444C2BD004EF00D30BEC;
+			remoteInfo = RMDomain;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -136,17 +138,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56B7449C2BD042F500D30BEC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				56B744992BD042F500D30BEC /* RMCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -158,7 +149,6 @@
 		5675F5BD2BD2B21F00C0793D /* CharactersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListView.swift; sourceTree = "<group>"; };
 		5675F5BF2BD2B23B00C0793D /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
 		5675F5C22BD2DBCB00C0793D /* CharacterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemView.swift; sourceTree = "<group>"; };
-		5675F5C52BD2EDAF00C0793D /* Character+EntityProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+EntityProtocols.swift"; sourceTree = "<group>"; };
 		5675F5CF2BD3D50900C0793D /* CharacterEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntityMock.swift; sourceTree = "<group>"; };
 		5675F5D32BD3E3A000C0793D /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		5675F5D62BD3E46C00C0793D /* RMAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMAsyncImage.swift; sourceTree = "<group>"; };
@@ -182,10 +172,9 @@
 		56B744702BD0052900D30BEC /* RMCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMCore.h; sourceTree = "<group>"; };
 		56B744752BD0052A00D30BEC /* RMCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B7447C2BD0052A00D30BEC /* RMCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCoreTests.swift; sourceTree = "<group>"; };
-		56B744892BD0057E00D30BEC /* RMRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRepository.swift; sourceTree = "<group>"; };
 		56B744902BD006C800D30BEC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		56B744932BD040DD00D30BEC /* CharactersListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListUseCase.swift; sourceTree = "<group>"; };
-		56B744952BD042C500D30BEC /* RMRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMRepositoryImplementation.swift; sourceTree = "<group>"; };
+		56B744952BD042C500D30BEC /* CharactersRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepositoryImplementation.swift; sourceTree = "<group>"; };
 		56B7449E2BD0686A00D30BEC /* LoadCharactersServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCharactersServiceImplementation.swift; sourceTree = "<group>"; };
 		56B744A12BD0789600D30BEC /* CharactersListUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListUseCaseTests.swift; sourceTree = "<group>"; };
 		56B744A52BD132C600D30BEC /* Character+Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Entity.swift"; sourceTree = "<group>"; };
@@ -196,6 +185,10 @@
 		56B744B22BD14A0800D30BEC /* APISessionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISessionConfiguration.swift; sourceTree = "<group>"; };
 		56B744B82BD14C1300D30BEC /* RMCoreException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCoreException.swift; sourceTree = "<group>"; };
 		56C688D12C529FD2008384CD /* CharacterItemViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemViewModelMock.swift; sourceTree = "<group>"; };
+		A11C4A012BD9000100D30BEC /* CharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepository.swift; sourceTree = "<group>"; };
+		A11C4A032BD9000100D30BEC /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		A11C4A052BD9000100D30BEC /* CharacterEntity+DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterEntity+DTO.swift"; sourceTree = "<group>"; };
+		A11C4A072BD9000100D30BEC /* CharacterEntityMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterEntityMappingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +219,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56B744982BD042F500D30BEC /* RMCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11C4A092BD9000100D30BEC /* RMDomain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B744762BD0052A00D30BEC /* RMCore.framework in Frameworks */,
+				A11C4A0E2BD9000100D30BEC /* RMDomain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,14 +289,6 @@
 				5675F5DC2BD5356B00C0793D /* CharacterItem */,
 			);
 			path = "UI Components";
-			sourceTree = "<group>";
-		};
-		5675F5C42BD2ED8D00C0793D /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				5675F5C52BD2EDAF00C0793D /* Character+EntityProtocols.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		5675F5CE2BD3D4F000C0793D /* Mocks */ = {
@@ -446,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				56B744192BCFE2C800D30BEC /* RMCharactersApp.swift */,
+				A11C4A032BD9000100D30BEC /* AppDependencies.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -491,6 +478,7 @@
 				5675F5A82BD2729B00C0793D /* Resources */,
 				56B7447C2BD0052A00D30BEC /* RMCoreTests.swift */,
 				5675F5932BD269D400C0793D /* LoadCharactersServiceTests.swift */,
+				A11C4A072BD9000100D30BEC /* CharacterEntityMappingTests.swift */,
 			);
 			path = RMCoreTests;
 			sourceTree = "<group>";
@@ -504,8 +492,8 @@
 				56B744AA2BD1455A00D30BEC /* Services */,
 				56B744A72BD1388800D30BEC /* Responses */,
 				56B7449D2BD067DA00D30BEC /* Network */,
-				56B744892BD0057E00D30BEC /* RMRepository.swift */,
-				56B744952BD042C500D30BEC /* RMRepositoryImplementation.swift */,
+				A11C4A0D2BD9000100D30BEC /* Mapping */,
+				56B744952BD042C500D30BEC /* CharactersRepositoryImplementation.swift */,
 				56B744902BD006C800D30BEC /* Character.swift */,
 			);
 			path = Shared;
@@ -515,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				56B744A32BD1326200D30BEC /* Entities */,
+				A11C4A0C2BD9000100D30BEC /* Repository */,
 				56B744922BD0409D00D30BEC /* UseCase */,
 			);
 			path = Shared;
@@ -556,7 +545,6 @@
 		56B744A32BD1326200D30BEC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				5675F5C42BD2ED8D00C0793D /* Protocols */,
 				56B744A42BD132A900D30BEC /* Characters */,
 			);
 			path = Entities;
@@ -602,6 +590,22 @@
 				56B744B82BD14C1300D30BEC /* RMCoreException.swift */,
 			);
 			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		A11C4A0C2BD9000100D30BEC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A11C4A012BD9000100D30BEC /* CharactersRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A11C4A0D2BD9000100D30BEC /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				A11C4A052BD9000100D30BEC /* CharacterEntity+DTO.swift */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -690,12 +694,10 @@
 				56B744492BD004EF00D30BEC /* Sources */,
 				56B7444A2BD004EF00D30BEC /* Frameworks */,
 				56B7444B2BD004EF00D30BEC /* Resources */,
-				56B7449C2BD042F500D30BEC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56B7449B2BD042F500D30BEC /* PBXTargetDependency */,
 			);
 			name = RMDomain;
 			productName = RMDomain;
@@ -733,6 +735,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A11C4A0B2BD9000100D30BEC /* PBXTargetDependency */,
 			);
 			name = RMCore;
 			productName = RMCore;
@@ -885,6 +888,7 @@
 				5675F5C02BD2B23B00C0793D /* CharactersListViewModel.swift in Sources */,
 				5675F5E22BD538DB00C0793D /* CharacterDisclosureView.swift in Sources */,
 				56B7441A2BCFE2C800D30BEC /* RMCharactersApp.swift in Sources */,
+				A11C4A042BD9000100D30BEC /* AppDependencies.swift in Sources */,
 				5675F5D02BD3D50900C0793D /* CharacterEntityMock.swift in Sources */,
 				5675F5BE2BD2B21F00C0793D /* CharactersListView.swift in Sources */,
 				5675F5D72BD3E46C00C0793D /* RMAsyncImage.swift in Sources */,
@@ -918,7 +922,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B744A62BD132C600D30BEC /* Character+Entity.swift in Sources */,
-				5675F5C62BD2EDAF00C0793D /* Character+EntityProtocols.swift in Sources */,
+				A11C4A022BD9000100D30BEC /* CharactersRepository.swift in Sources */,
 				56B744942BD040DD00D30BEC /* CharactersListUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -939,7 +943,6 @@
 				56B744AE2BD1462000D30BEC /* NetworkSession.swift in Sources */,
 				56B744912BD006C800D30BEC /* Character.swift in Sources */,
 				56B744AC2BD1458D00D30BEC /* LoadCharactersService.swift in Sources */,
-				56B7448A2BD0057E00D30BEC /* RMRepository.swift in Sources */,
 				56B744B92BD14C1300D30BEC /* RMCoreException.swift in Sources */,
 				56B744A92BD138AB00D30BEC /* CharacterResponse.swift in Sources */,
 				5675F5922BD2495A00C0793D /* GetCharactersListRequest.swift in Sources */,
@@ -947,7 +950,8 @@
 				56B744B32BD14A0800D30BEC /* APISessionConfiguration.swift in Sources */,
 				56B7449F2BD0686A00D30BEC /* LoadCharactersServiceImplementation.swift in Sources */,
 				5675F5962BD26AC400C0793D /* CharacterResponseSamples.swift in Sources */,
-				56B744962BD042C500D30BEC /* RMRepositoryImplementation.swift in Sources */,
+				A11C4A062BD9000100D30BEC /* CharacterEntity+DTO.swift in Sources */,
+				56B744962BD042C500D30BEC /* CharactersRepositoryImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,6 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5675F5942BD269D400C0793D /* LoadCharactersServiceTests.swift in Sources */,
+				A11C4A082BD9000100D30BEC /* CharacterEntityMappingTests.swift in Sources */,
 				5675F5AA2BD272AD00C0793D /* MockNetworkSession.swift in Sources */,
 				56B7447D2BD0052A00D30BEC /* RMCoreTests.swift in Sources */,
 			);
@@ -1004,10 +1009,10 @@
 			target = 56B7446D2BD0052900D30BEC /* RMCore */;
 			targetProxy = 56B7447F2BD0052A00D30BEC /* PBXContainerItemProxy */;
 		};
-		56B7449B2BD042F500D30BEC /* PBXTargetDependency */ = {
+		A11C4A0B2BD9000100D30BEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56B7446D2BD0052900D30BEC /* RMCore */;
-			targetProxy = 56B7449A2BD042F500D30BEC /* PBXContainerItemProxy */;
+			target = 56B7444C2BD004EF00D30BEC /* RMDomain */;
+			targetProxy = A11C4A0A2BD9000100D30BEC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

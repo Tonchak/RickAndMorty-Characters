@@ -3,14 +3,13 @@ import RMDomain
 
 final class CharactersListViewModel: ObservableObject {
 
-    @Published var loadedList = [CharacterEntityProtocol]()
+    @Published var loadedList = [CharacterEntity]()
     var navigationTitle = "Rick And Morty"
     private var pageNumber = 0
 
-    // Use cases
     private let useCase: CharactersListUseCase
 
-    init(useCase: CharactersListUseCase = DefaultCharactersListUseCase()) {
+    init(useCase: CharactersListUseCase) {
         self.useCase = useCase
     }
 
@@ -24,7 +23,7 @@ final class CharactersListViewModel: ObservableObject {
         }
     }
 
-    func isLastItem(_ item: CharacterEntityProtocol) -> Bool {
+    func isLastItem(_ item: CharacterEntity) -> Bool {
         if let lastItem = loadedList.last, lastItem.id == item.id {
             return true
         }

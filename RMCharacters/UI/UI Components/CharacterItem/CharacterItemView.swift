@@ -1,5 +1,4 @@
 import SwiftUI
-import RMDomain
 
 struct CharacterItemView<VM: CharacterItemViewModel>: View {
 
@@ -49,6 +48,6 @@ struct CharacterItemView<VM: CharacterItemViewModel>: View {
 }
 
 #Preview {
-    CharacterItemView(viewModel: CharacterItemViewModel(data: CharacterEntityMock()))
+    CharacterItemView(viewModel: CharacterItemViewModel(data: .preview()))
         //.environment(\.sizeCategory, .accessibilityLarge)
 }

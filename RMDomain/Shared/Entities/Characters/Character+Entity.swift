@@ -1,50 +1,64 @@
 import Foundation
-import RMCore
 
-public struct CharacterEntity: CharacterEntityProtocol {
+public struct CharacterEntity: Equatable {
     public let id: Int
     public let name: String
     public let status: String
     public let species: String
     public let type: String?
     public let gender: String
-    public let origin: OriginEntityProtocol
-    public let location: LocationEntityProtocol
+    public let origin: OriginEntity
+    public let location: LocationEntity
     public let image: String
     public let episode: [String]
     public let url: String
     public let created: String
 
-    init(decodable: Character) {
-        self.id = decodable.id
-        self.name = decodable.name
-        self.status = decodable.status
-        self.species = decodable.species
-        self.type = decodable.type
-        self.gender = decodable.gender
-        self.origin = OriginEntity(decodable: decodable.origin)
-        self.location = LocationEntity(decodable: decodable.location)
-        self.image = decodable.image
-        self.episode = decodable.episode
-        self.url = decodable.url
-        self.created = decodable.created
+    public init(
+        id: Int,
+        name: String,
+        status: String,
+        species: String,
+        type: String?,
+        gender: String,
+        origin: OriginEntity,
+        location: LocationEntity,
+        image: String,
+        episode: [String],
+        url: String,
+        created: String
+    ) {
+        self.id = id
+        self.name = name
+        self.status = status
+        self.species = species
+        self.type = type
+        self.gender = gender
+        self.origin = origin
+        self.location = location
+        self.image = image
+        self.episode = episode
+        self.url = url
+        self.created = created
     }
 }
 
-public struct OriginEntity: OriginEntityProtocol {
+public struct OriginEntity: Equatable {
     public let name: String
     public let url: String
-    init(decodable: Origin) {
-        self.name = decodable.name
-        self.url = decodable.url
+
+    public init(name: String, url: String) {
+        self.name = name
+        self.url = url
     }
 }
 
-public struct LocationEntity: LocationEntityProtocol {
+public struct LocationEntity: Equatable {
     public let name: String
     public let url: String
-    init(decodable: Location) {
-        self.name = decodable.name
-        self.url = decodable.url
+
+    public init(name: String, url: String) {
+        self.name = name
+        self.url = url
     }
 }
